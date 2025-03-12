@@ -38,7 +38,7 @@ a {
   transition: opacity 300ms ease;
 }
 
-a:hover {
+i:hover {
   opacity: 0.7;
 }
 
@@ -46,12 +46,21 @@ a:hover {
    content: "";
    position: absolute;
     height: 3px;
-    background-color: black;
     width: 0; 
     bottom: -3px; 
     right: 0;
     transition: all 300ms ease;
 }
+
+.link__hover-effect--white:after {
+  background-color: white;
+}
+
+
+.link__hover-effect--black:after {
+  background-color: black;
+}
+
 
 .link__hover-effect:hover:after {
   width: 100%;
@@ -82,7 +91,7 @@ li {
 }
 
 .text--purple {
-  color: #6030b1;
+  color: #0101fe;
 }
 
 section:nth-child(even) {
@@ -93,7 +102,7 @@ section:nth-child(even) {
   margin-bottom: 20px;
 }
 
-/*Navigation Bar*/
+/* Navigation Bar */
 
 nav {
   height: 100px;
@@ -117,11 +126,11 @@ nav {
 }
 
 .nav__link--anchor-primary {
-    color: white;
-    background-color: #6030b1;
+    background-color: #5d3eff;
     padding: 8px 20px;
     border-radius: 50px;
-    transition: background-color 300ms ease;
+    color: white;
+    transition: all 300ms ease;
 }
 
 .nav__link--anchor-primary:hover {
@@ -130,7 +139,7 @@ nav {
 
 .personal__logo {
   font-size: 24px;
-  color: #6030b1;
+  color: #0101fe;
   margin: 0 12px;
   font-weight: bold;
 }
@@ -144,18 +153,16 @@ nav {
 
 .about-me__info {
   display: flex;
-  justify-content: center;
   flex-direction: column;
 }
 
 .about-me__info--container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  padding: 40px 0;
 }
 
 .about-me__picture--mask {
@@ -184,22 +191,19 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-
-/* Improving my own picture */
   transform: scale(1.5);
   padding: 8px;
 }
 
 .about-me__info--title {
   margin-bottom: 16px;
-  animation: fade-up 650ms 400ms backwords;
+  animation: fade-up 650ms 400ms backwards;
 }
 
 .about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
-    animation: fade-up 650ms 600ms backwords;
+    animation: fade-up 650ms 600ms backwards;
 }
 
 .about-me__link {
@@ -209,7 +213,7 @@ nav {
 }
 
 .about-me__links {
-  animation: fade-up 650ms 800ms backwords;
+  animation: fade-up 650ms 800ms backwards;
 
 }
 
@@ -232,7 +236,7 @@ nav {
 
 .about-me__img {
   width: 100%;
-  animation: fade-in 1200ms 800ms backwords;
+  animation: fade-in 1200ms 800ms backwards;
 }
 
 @keyframes fade-in {
@@ -305,7 +309,7 @@ animation: animate-wave 500ms infinite ease-in-out;
   opacity: 0;
 }
 
-.language__img:hover .language__name {
+.language:hover .language__name {
   transform: scale(1);
   opacity: 1;
 }
@@ -313,7 +317,7 @@ animation: animate-wave 500ms infinite ease-in-out;
 /* Projects */
 
 .project {
-  margin-bottom: 135px;;
+  margin-bottom: 135px;
 }
 
 .project:last-child {
@@ -373,7 +377,7 @@ animation: animate-wave 500ms infinite ease-in-out;
     max-width: 550px;
     z-index: 3;
     opacity: 0;
-    transition: transform 450ms, opacity 300ms;;
+    transition: transform 450ms, opacity 300ms;
   }
 
   .project__description--title {
@@ -428,7 +432,7 @@ animation: animate-wave 500ms infinite ease-in-out;
     
   }
 
-  .footer__logo__popper {
+  .footer__logo--popper {
    position: absolute;
     right: 0; 
     top: 30px;
@@ -442,7 +446,7 @@ animation: animate-wave 500ms infinite ease-in-out;
    position: relative; 
   }
 
-  .footer__anchor:hover .footer__logo__popper {
+  .footer__anchor:hover .footer__logo--popper {
     transform: translateX(60px);
   }
 
